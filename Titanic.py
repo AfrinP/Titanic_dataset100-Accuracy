@@ -24,7 +24,6 @@ def preprocessing(data):
     except:
         pass
     
-    
     X_columns = data.columns
     normalize = StandardScaler()
     X = normalize.fit_transform(data)
@@ -37,7 +36,6 @@ def train(train_raw_data):
     y_train = train_raw_data["Survived"]
     model = LogisticRegression()
     model.fit(X_train, y_train)
-    
     return model
 
 # Initilaize Training and Test Data
